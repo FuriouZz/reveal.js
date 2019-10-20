@@ -106,6 +106,7 @@ module.exports = grunt => {
 					port: port,
 					base: root,
 					livereload: true,
+					hostname: 'localhost',
 					open: false,
 					useAvailablePort: true
 				}
@@ -166,7 +167,7 @@ module.exports = grunt => {
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
 
 	// JS task
-	grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
+	grunt.registerTask( 'js', [ 'jshint', 'uglify' ] );
 
 	// Theme CSS
 	grunt.registerTask( 'css-themes', [ 'sass:themes' ] );
